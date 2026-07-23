@@ -250,3 +250,81 @@ h1, h2, h3, p, a, .link-chip { overflow-wrap: break-word; }
 .reveal { opacity: 0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease; }
 .reveal.in { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; } .btn:hover, .card:hover { transform: none; } }
+
+/* ===================================================================
+   Design pass — UI Designer · Brand Guardian · UX Architect
+   =================================================================== */
+
+/* AA-passing gold for text on light surfaces (fills stay #D4AF37) */
+:root { --gold-ink: #92701a; }
+.eyebrow, .product .p-link, .link-chip, .back-link { color: var(--gold-ink); }
+:root[data-theme="dark"] .eyebrow,
+:root[data-theme="dark"] .product .p-link,
+:root[data-theme="dark"] .link-chip,
+:root[data-theme="dark"] .back-link { color: var(--gold); }
+
+/* Type scale to the brand guide (H1 72 / H3 24) */
+h1 { font-size: clamp(2.4rem, 6vw, 4.5rem); }
+h3 { font-size: clamp(1.15rem, 2vw, 1.5rem); }
+
+/* Buttons: guide = rounded rectangle (not full pill), with trailing arrow */
+.btn { border-radius: 10px; }
+.link-chip { border-radius: 8px; }
+.btn-arrow { display: inline-block; transition: transform .18s ease; }
+.btn:hover .btn-arrow { transform: translateX(3px); }
+
+/* Spacing snapped to the 4px scale */
+.grid { gap: 1.5rem; }
+.section-head { margin-bottom: 3rem; }
+
+/* Keyboard focus — a visible gold ring everywhere (was missing) */
+.btn:focus-visible,
+.icon-btn:focus-visible,
+.link-chip:focus-visible,
+.nav-links a:focus-visible,
+.footer-list a:focus-visible,
+a.product:focus-visible,
+.hero-note a:focus-visible,
+[data-theme-toggle]:focus-visible,
+[data-lang-toggle]:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+:root[data-theme="dark"] .btn-primary:focus-visible { outline-color: #fff; }
+
+/* Feature the one live product (Captain.Food) vs the two "coming soon" */
+a.product:not(.is-soon) {
+  border-color: var(--gold);
+  box-shadow: 0 1px 2px rgba(0,0,0,.05), 0 12px 30px rgba(212,175,55,.16);
+}
+a.product:not(.is-soon):hover {
+  box-shadow: 0 1px 2px rgba(0,0,0,.05), 0 16px 40px rgba(212,175,55,.24);
+}
+
+/* "How we build" cards: gold top-accent wipes in on hover (replaces 01–04) */
+#how .card { overflow: hidden; }
+#how .card::before {
+  content: ""; position: absolute; top: 0; left: 1.5rem; right: 1.5rem; height: 2px;
+  background: var(--gold); border-radius: 0 0 2px 2px;
+  transform: scaleX(0); transform-origin: left; transition: transform .28s ease;
+}
+#how .card:hover::before { transform: scaleX(1); }
+@media (prefers-reduced-motion: reduce) { #how .card::before { display: none; } }
+
+/* Mission: a distinct dark band in both themes (gold hairline + faint radial) */
+.mission {
+  background: radial-gradient(900px 480px at 50% -20%, rgba(212,175,55,.15), transparent 60%), #000;
+  border-block: 1px solid rgba(212,175,55,.30);
+  position: relative; overflow: hidden;
+}
+
+/* Hero support note — Captain.Food demoted to proof, not the primary CTA */
+.hero-note { margin-top: 1.2rem; font-size: 0.9rem; color: #cfc9bb; }
+.hero-note a { color: var(--gold); font-family: var(--font-display); font-weight: 600; }
+
+/* Keep a persistent router CTA on the mobile header (was hidden < 860px) */
+@media (max-width: 860px) {
+  .nav-tools { margin-left: auto; }
+  .nav-cta { display: inline-flex; padding: 0.55rem 0.95rem; font-size: 0.85rem; }
+}
+@media (max-width: 520px) { .brand-word { display: none; } }

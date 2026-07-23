@@ -70,7 +70,7 @@
     root.setAttribute("data-theme", t);
     try { localStorage.setItem("tcc-theme", t); } catch (e) {}
     var b = document.querySelector("[data-theme-toggle]");
-    if (b) b.textContent = t === "dark" ? "☀︎" : "☾";
+    if (b) { b.textContent = t === "dark" ? "☀︎" : "☾"; b.setAttribute("aria-pressed", t === "dark"); }
   }
   var savedTheme;
   try { savedTheme = localStorage.getItem("tcc-theme"); } catch (e) {}
