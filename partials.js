@@ -8,10 +8,8 @@
   // ---- Contact constants (single source of truth) ----
   var EMAIL = "contact@thecaptaincompany.com";
   var GITHUB = "https://github.com/TheCaptainCompany";
-  // TODO: set the WhatsApp link once provided (e.g. "https://wa.me/33XXXXXXXXX").
-  // While empty, WhatsApp CTAs gracefully fall back to email and the floating
-  // bubble is not shown — so nothing ships broken.
-  var WA = "";
+  // Shared WhatsApp entry point (same link as Captain.Food).
+  var WA = "https://wa.me/message/LTDD42WUFXINA1";
 
   function svg(d) {
     return '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="' + d + '"/></svg>';

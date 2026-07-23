@@ -21,6 +21,11 @@ Static site served by **GitHub Pages** at the custom domain **`thecaptaincompany
 - Logo assets in `assets/brand/` were cropped from the brand guide; swap in vector/transparent versions later with no markup change.
 - Brand guide + decisions: see [`.github` repo → `docs/thecaptaincompany-landing.brief.md`](https://github.com/TheCaptainCompany/.github/blob/main/docs/thecaptaincompany-landing.brief.md).
 
-## TODO
-- **WhatsApp link** — set `WA` in `partials.js` once the number is known. Until then, WhatsApp CTAs fall back to email and the floating bubble is hidden (nothing ships broken).
-- DNS: point `thecaptaincompany.com` (+ `www` → bare) at GitHub Pages, then enable **Enforce HTTPS** in Settings → Pages.
+## Logo usage
+Per brand direction, the logo appears **only in the header and the footer**. The raster crops in
+`assets/brand/` came from the brand guide (no vector/transparent source available); swap in
+SVG/transparent PNG later with no markup change.
+
+## Status
+- WhatsApp: live (shared link with Captain.Food).
+- DNS + Pages custom domain: configured. ✅
