@@ -1,0 +1,19 @@
+# THE CAPTAIN COMPANY
+
+> THE CAPTAIN COMPANY builds open, spec-driven software that gives independents back control from extractive platforms. It is a Caring Hope Foundation initiative (not yet an incorporated company), based around Tours, France. Everything is open source and built to last.
+
+How we build: a single YAML specification is the source of truth — schema, GraphQL API, docs and completeness checks are all generated from it. Full-stack Rust (Leptos/WASM front, Axum + async-GraphQL back, CQRS over an event log, one shared core across web, desktop and mobile). Architectural decisions are recorded as ADRs; observability is a tested contract. Public repositories, open source by default.
+
+## Products
+- Captain.Food — the flagship, in pilot: 0% commission food ordering for local restaurants and food trucks in Tours. https://join.captain.food
+- captain-engine — the spec-driven engine (coming soon; internal for now).
+- captain-studio — visual authoring/administration of the specs (coming soon; internal for now).
+
+## Pages
+- Home: https://thecaptaincompany.com/
+- Legal notice (FR): https://thecaptaincompany.com/mentions-legales.html
+- Privacy (FR): https://thecaptaincompany.com/confidentialite.html
+
+## Contact
+- Email: contact@thecaptaincompany.com
+- GitHub: https://github.com/TheCaptainCompany
