@@ -26,7 +26,7 @@
   var FOOTER =
     '<div class="container footer-grid">' +
       '<div class="footer-col">' +
-        '<div class="footer-brand"><img src="/assets/brand/icon-gold.png" alt="" width="34" height="34">' +
+        '<div class="footer-brand"><img src="/assets/brand/emblem-gold.png" alt="" height="32">' +
           '<span class="fw">THE CAPTAIN <span class="b-co">COMPANY</span></span></div>' +
         '<p class="footer-tag"><span class="t-en">Open, spec-driven software against extractive platforms. A Caring Hope Foundation initiative.</span>' +
           '<span class="t-fr">Des logiciels ouverts, pilotés par la spécification, contre les plateformes extractives. Une initiative de la Caring Hope Foundation.</span></p>' +
