@@ -110,7 +110,7 @@ img { max-width: 100%; display: block; }
 }
 .nav { display: flex; align-items: center; gap: 1rem; height: 68px; }
 .brand { display: flex; align-items: center; gap: 0.6rem; }
-.brand-badge { height: 34px; width: auto; display: block; }
+.brand-badge { width: 38px; height: 38px; border-radius: 9px; }
 .brand-word { font-family: var(--font-display); font-weight: 700; line-height: 0.92; letter-spacing: 0.02em; }
 .brand-word .b-the { display: block; font-size: 0.52rem; letter-spacing: 0.32em; font-weight: 500; color: var(--muted); }
 .brand-word .b-main { font-size: 1.02rem; }
@@ -222,7 +222,7 @@ h1, h2, h3, p, a, .link-chip { overflow-wrap: break-word; }
 .site-footer { background: #000; color: #cfc9bb; padding-block: 3rem 2rem; border-top: 3px solid var(--gold); }
 .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 2rem; }
 .footer-brand { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.6rem; }
-.footer-brand img { height: 32px; width: auto; }
+.footer-brand img { width: 34px; height: 34px; border-radius: 8px; }
 .footer-brand .fw { font-family: var(--font-display); font-weight: 700; color: #fff; letter-spacing: 0.02em; }
 .footer-brand .fw .b-co { color: var(--gold); }
 .footer-tag { font-size: 0.9rem; color: #9c968a; max-width: 34ch; }
