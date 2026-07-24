@@ -77,13 +77,22 @@
   if (!savedTheme) savedTheme = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
   applyTheme(savedTheme);
 
-  // ---- Language (FR/EN) ----
+  // ---- Language (FR/EN) with flag toggle ----
+  // Inline SVG flags (render everywhere, unlike emoji flags on Windows).
+  var FLAG_FR = '<svg class="flag" viewBox="0 0 3 2" aria-hidden="true"><rect width="3" height="2" fill="#fff"/><rect width="1" height="2" fill="#0055A4"/><rect x="2" width="1" height="2" fill="#EF4135"/></svg>';
+  var FLAG_GB = '<svg class="flag" viewBox="0 0 60 30" aria-hidden="true"><clipPath id="tccUkA"><path d="M0,0 v30 h60 v-30 z"/></clipPath><clipPath id="tccUkB"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath><g clip-path="url(#tccUkA)"><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#tccUkB)" stroke="#C8102E" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></g></svg>';
   function applyLang(l) {
     root.setAttribute("data-lang", l);
     root.setAttribute("lang", l);
     try { localStorage.setItem("tcc-lang", l); } catch (e) {}
     var b = document.querySelector("[data-lang-toggle]");
-    if (b) b.textContent = l === "en" ? "FR" : "EN";
+    if (b) {
+      // Show the flag of the language you can switch TO.
+      b.innerHTML = l === "en" ? FLAG_FR : FLAG_GB;
+      var label = l === "en" ? "Passer en français" : "Switch to English";
+      b.setAttribute("aria-label", label);
+      b.setAttribute("title", label);
+    }
   }
   var savedLang;
   try { savedLang = localStorage.getItem("tcc-lang"); } catch (e) {}
