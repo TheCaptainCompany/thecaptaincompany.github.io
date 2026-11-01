@@ -36,7 +36,7 @@
         '<ul class="footer-list">' +
           '<li><a href="/#how"><span class="t-en">How we build</span><span class="t-fr">Comment on construit</span></a></li>' +
           '<li><a href="/#products"><span class="t-en">Products</span><span class="t-fr">Produits</span></a></li>' +
-          '<li><a href="https://join.captain.food" target="_blank" rel="noopener">Captain.Food</a></li>' +
+          '<li><a href="https://github.com/TheCaptainCompany/captain-food" target="_blank" rel="noopener">Captain.Food</a></li>' +
           '<li><a href="' + GITHUB + '" target="_blank" rel="noopener">' + ICON.github + ' GitHub</a></li>' +
         '</ul>' +
       '</div>' +

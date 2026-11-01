@@ -5,7 +5,7 @@
 How we build: a single YAML specification is the source of truth — schema, GraphQL API, docs and completeness checks are all generated from it. Full-stack Rust (Leptos/WASM front, Axum + async-GraphQL back, CQRS over an event log, one shared core across web, desktop and mobile). Architectural decisions are recorded as ADRs; observability is a tested contract. Public repositories, open source by default.
 
 ## Products
-- Captain.Food — the flagship, in pilot: 0% commission food ordering for local restaurants and food trucks in Tours. https://join.captain.food
+- Captain.Food — the flagship, in pilot: 0% commission food ordering for local restaurants and food trucks in Tours. https://github.com/TheCaptainCompany/captain-food
 - captain-engine — the spec-driven engine (coming soon; internal for now).
 - captain-studio — visual authoring/administration of the specs (coming soon; internal for now).
 

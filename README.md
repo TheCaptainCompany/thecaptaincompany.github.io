@@ -1,7 +1,7 @@
 # thecaptaincompany.com
 
 Marketing site for **THE CAPTAIN COMPANY** — a Caring Hope Foundation initiative building open,
-spec-driven software against extractive platforms, starting with [Captain.Food](https://join.captain.food).
+spec-driven software against extractive platforms, starting with [Captain.Food](https://github.com/TheCaptainCompany/captain-food).
 
 Static site served by **GitHub Pages** at the custom domain **`thecaptaincompany.com`**.
 
